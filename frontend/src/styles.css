@@ -1,0 +1,987 @@
+:root{--brand:#1f4e9c;--bg:#f5f7fb;--card:#fff;--line:#dfe4ee;--text:#1d2433}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text)}
+header{background:var(--brand);color:#fff;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.brand{font-size:1.3rem;font-weight:700}.brand span{color:#ffd166}.brand small{font-weight:400;font-size:.75rem;margin-left:8px;opacity:.8}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav button{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+nav button.active{background:#fff;color:var(--brand)}
+main{max-width:980px;margin:20px auto;padding:0 14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:14px}
+h2{margin:.2rem 0 .8rem}
+label{display:block;margin-top:10px;font-weight:600;font-size:.9rem}
+input,select,textarea,button{font:inherit;padding:8px 10px;border-radius:6px;border:1px solid var(--line)}
+input,select,textarea{width:100%;max-width:480px;background:#fff}
+button{cursor:pointer;background:var(--brand);color:#fff;border-color:var(--brand)}
+button.secondary{background:#fff;color:var(--brand)}
+button.danger{background:#c0392b;border-color:#c0392b}
+button.ok{background:#1e8e4e;border-color:#1e8e4e}
+.row{display:flex;gap:10px;flex-wrap:wrap}.row>div{flex:1;min-width:140px}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+th{background:#eef2fa}
+.tag{padding:2px 9px;border-radius:12px;font-size:.8rem;background:#eee}
+.Pending{background:#fff3cd}.Approved,.Completed{background:#d4edda}.Rejected,.NoShow{background:#f8d7da}.Cancelled{background:#e2e3e5}
+.msg{padding:10px 12px;border-radius:6px;margin:8px 0}
+.msg.info{background:#e8f1fd}.msg.error{background:#fde8e8}.msg.ok{background:#e3f6ea}
+.cluster{border:2px solid #f0ad4e}.cluster.single{border:1px solid var(--line)}
+.muted{color:#667}.inline{display:inline-flex;gap:6px;margin:2px 0;flex-wrap:wrap}
+.inline input{max-width:150px}
+.tabs{display:flex;gap:6px;margin-bottom:12px}.tabs button.secondary.active{background:var(--brand);color:#fff}
+.scroll{overflow-x:auto}
+
+/* ===== CAMPUSCONNECT: ELEGANT COLLEGE PORTAL ===== */
+
+:root {
+  --brand: #891b2b;
+  --brand-dark: #711522;
+  --bg: #f6f4f2;
+  --card: #ffffff;
+  --line: #e8e0dc;
+  --text: #191919;
+  --ok: #25834d;
+  --bad: #c0392b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+  background:
+    radial-gradient(
+      ellipse at 8% 0%,
+      rgba(137, 27, 43, 0.035),
+      transparent 40%
+    ),
+    #f6f4f2;
+}
+
+/* College branding header */
+header.top {
+  background: var(--brand);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  flex-wrap: wrap;
+  border-bottom: 4px solid #d6b45b;
+  box-shadow: 0 3px 12px rgba(50, 20, 20, 0.12);
+}
+
+header.top h1,
+header.top h2,
+header.top h3 {
+  color: white;
+}
+
+header nav {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+header nav button {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,.4);
+  margin: 0;
+}
+
+header nav button.active {
+  background: white;
+  color: var(--brand);
+}
+
+.who {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+/* Page width and spacing */
+main {
+  max-width: 1360px;
+  margin: 24px auto;
+  padding: 0 22px;
+}
+
+/* White booking panels */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 12px rgba(45, 30, 25, 0.035);
+}
+
+.card:hover {
+  box-shadow: 0 5px 18px rgba(45, 30, 25, 0.065);
+}
+
+.card.conflict {
+  border: 2px solid #f0ad4e;
+}
+
+/* Headings */
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 1.45rem;
+  margin: 0.2rem 0 0.7rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 0.2rem 0 0.6rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+}
+
+.muted {
+  color: #716c6b;
+}
+
+/* Forms */
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 12px;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+}
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding: 11px 13px;
+  min-height: 45px;
+  background: white;
+  color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #b18a32;
+  box-shadow: 0 0 0 3px rgba(177, 138, 50, 0.13);
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  background: var(--brand);
+  color: white;
+  border-color: var(--brand);
+  padding: 11px 17px;
+  margin-top: 10px;
+  font-weight: 600;
+  transition: background 0.18s ease;
+}
+
+button:hover:not(:disabled) {
+  background: var(--brand-dark);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+button.ghost {
+  background: white;
+  color: var(--brand);
+  margin: 0;
+}
+
+header button.ghost {
+  background: transparent;
+  color: white;
+  border-color: rgba(255,255,255,.5);
+}
+
+button.danger {
+  background: var(--bad);
+  border-color: var(--bad);
+}
+
+button.ok {
+  background: var(--ok);
+  border-color: var(--ok);
+}
+
+button.link {
+  background: none;
+  border: none;
+  color: var(--brand);
+  padding: 0;
+  text-decoration: underline;
+}
+
+/* Two-column booking layout */
+.grid2 {
+  display: grid;
+  grid-template-columns: minmax(0, 2.3fr) minmax(320px, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.row3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.row-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Login */
+.login-wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #f6f4f2;
+}
+
+.login {
+  width: 100%;
+  max-width: 460px;
+}
+
+/* Messages */
+.toast {
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.toast.ok {
+  background: #e3f6ea;
+}
+
+.toast.error {
+  background: #fde8e8;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--line);
+  padding: 11px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #f5f1ef;
+}
+
+.scroll {
+  overflow-x: auto;
+}
+
+/* Booking status labels */
+.chip-status {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  background: #eee;
+}
+
+.chip-status.Pending {
+  background: #fff3cd;
+}
+
+.chip-status.Approved {
+  background: #d4edda;
+}
+
+.chip-status.Rejected {
+  background: #f8d7da;
+}
+
+.chip-status.Cancelled {
+  background: #e2e3e5;
+}
+
+.chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background: #f8e9eb;
+  color: var(--brand);
+  border: 1px solid #e9c9ce;
+  border-radius: 14px;
+  padding: 4px 10px;
+  margin: 0 4px 4px 0;
+  font-size: 0.88rem;
+}
+
+.chip.static {
+  display: inline-block;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.tabs button {
+  background: white;
+  color: var(--brand);
+  margin: 0;
+}
+
+.tabs button.active {
+  background: var(--brand);
+  color: white;
+}
+
+/* Calendar */
+.cal-head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cal-head h2 {
+  margin: 0;
+}
+
+.cal-head select {
+  width: auto;
+  margin: 0;
+}
+
+.pager {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.legend {
+  display: flex;
+  gap: 16px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.sw {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-right: 4px;
+  vertical-align: -1px;
+}
+
+.sw.approved {
+  background: #7aa7e8;
+}
+
+.sw.pending {
+  background: #ffe08a;
+}
+
+.sw.mine {
+  background: white;
+  border: 2px solid #1e8e4e;
+}
+
+.week {
+  display: grid;
+  grid-template-columns: 48px repeat(7, minmax(0, 1fr));
+  gap: 3px;
+}
+
+.time-col {
+  position: relative;
+}
+
+.tick {
+  position: absolute;
+  font-size: 0.8rem;
+  color: #716c6b;
+  transform: translateY(-6px);
+}
+
+.day {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+  background: white;
+}
+
+.day.today .day-head {
+  background: #f8e9eb;
+  color: var(--brand);
+}
+
+.day-head {
+  min-height: 34px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 34px;
+  background: #faf8f7;
+}
+
+.day-body {
+  position: relative;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 43px,
+    var(--line) 43px,
+    var(--line) 44px
+  );
+}
+
+.block {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  border-radius: 4px;
+  padding: 3px 4px;
+  font-size: 0.75rem;
+  overflow: hidden;
+  line-height: 1.2;
+}
+
+.block.approved {
+  background: #7aa7e8;
+  color: #0b2a5b;
+}
+
+.block.pending {
+  background: #ffe08a;
+  color: #5b4300;
+}
+
+.block.mine {
+  outline: 2px solid #1e8e4e;
+}
+
+.slots > div {
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+/* Responsive layout */
+@media (max-width: 850px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .row3 {
+    grid-template-columns: 1fr;
+  }
+
+  header.top {
+    padding: 14px;
+  }
+
+  main {
+    padding: 0 14px;
+  }
+
+  .card {
+    padding: 17px;
+  }
+
+  .week {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+
+  .pager {
+    margin-left: 0;
+  }
+
+  .brand.big {
+    font-size: 1.6rem;
+  }
+}
+
+/* ===== INCREASE OVERALL CAMPUSCONNECT SIZE ===== */
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Bigger page headings */
+h1 {
+  font-size: 2.3rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+/* Bigger college header */
+header.top {
+  padding: 22px 30px;
+}
+
+.brand {
+  font-size: 1.7rem;
+}
+
+.brand small {
+  font-size: 0.9rem;
+}
+
+.who {
+  font-size: 1rem;
+}
+
+/* More space for the main content */
+main {
+  max-width: 1500px;
+  padding: 0 28px;
+  margin: 30px auto;
+}
+
+/* Larger calendar and booking cards */
+.card {
+  padding: 28px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+}
+
+/* Larger form labels */
+label {
+  font-size: 1.05rem;
+  margin-top: 16px;
+}
+
+/* Bigger input boxes */
+input,
+select,
+textarea {
+  font-size: 1.05rem;
+  padding: 15px 17px;
+  min-height: 54px;
+  margin-top: 7px;
+}
+
+/* Bigger buttons */
+button {
+  font-size: 1.05rem;
+  padding: 14px 22px;
+  min-height: 52px;
+}
+
+/* Larger calendar cells */
+.day-head {
+  font-size: 1rem;
+  min-height: 42px;
+  line-height: 42px;
+}
+
+.week {
+  gap: 4px;
+}
+
+.day {
+  min-height: 110px;
+}
+
+.tick {
+  font-size: 0.9rem;
+}
+
+.block {
+  font-size: 0.9rem;
+  padding: 5px;
+  line-height: 1.35;
+}
+
+.legend {
+  font-size: 1rem;
+  gap: 20px;
+}
+
+/* Larger tables */
+table {
+  font-size: 1.05rem;
+}
+
+th,
+td {
+  padding: 15px 17px;
+}
+
+/* Larger status labels */
+.chip-status,
+.chip {
+  font-size: 0.95rem;
+  padding: 6px 12px;
+}
+
+/* Keep the layout usable on smaller screens */
+@media (max-width: 850px) {
+  html {
+    font-size: 18px;
+  }
+
+  main {
+    padding: 0 14px;
+  }
+
+  .grid2,
+  .row3 {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .week {
+    min-width: 650px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}
+/* Make the login page larger */
+.login-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.card.login {
+  width: 100%;
+  max-width: 480px;
+  padding: 36px;
+  box-sizing: border-box;
+  border-radius: 14px;
+}
+
+.brand.big {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.login .muted {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.login label {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.login input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 52px;
+  padding: 12px;
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.login button:not(.link) {
+  min-height: 48px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.login .toast {
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.login .row-links {
+  margin-top: 18px;
+  font-size: 15px;
+}
+
+/* Keep the form usable on mobile */
+@media (max-width: 520px) {
+  .login-wrap {
+    padding: 16px;
+  }
+
+  .card.login {
+    padding: 24px;
+  }
+
+  .brand.big {
+    font-size: 28px;
+  }
+}
+
+/* FULL-SIZE CAMPUSCONNECT LOGIN PAGE */
+.login-wrap {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 30px !important;
+  box-sizing: border-box !important;
+  overflow-y: auto !important;
+}
+
+.card.login {
+  width: 90% !important;
+  max-width: 1000px !important;
+  padding: 75px !important;
+  margin: auto !important;
+  box-sizing: border-box !important;
+  border-radius: 24px !important;
+}
+
+/* BRAND */
+.login .brand.big {
+  font-size: 58px !important;
+  margin-bottom: 35px !important;
+}
+
+/* DESCRIPTION */
+.login p.muted {
+  font-size: 28px !important;
+  line-height: 1.8 !important;
+  margin-bottom: 40px !important;
+}
+
+/* LABELS */
+.login label {
+  display: block !important;
+  font-size: 27px !important;
+  margin-bottom: 30px !important;
+}
+
+/* EMAIL AND OTP INPUTS */
+.login input {
+  display: block !important;
+  width: 100% !important;
+  height: 90px !important;
+  padding: 24px !important;
+  margin-top: 16px !important;
+  font-size: 28px !important;
+  box-sizing: border-box !important;
+  border-radius: 12px !important;
+}
+
+/* MAIN BUTTONS */
+.login button:not(.link) {
+  width: 100% !important;
+  min-height: 88px !important;
+  padding: 22px 30px !important;
+  font-size: 26px !important;
+  border-radius: 12px !important;
+}
+
+/* OTP MESSAGE */
+.login .toast {
+  font-size: 26px !important;
+  line-height: 1.8 !important;
+  padding: 28px !important;
+  margin-bottom: 32px !important;
+}
+
+/* RESEND AND CHANGE EMAIL */
+.login .row-links {
+  display: flex !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 24px !important;
+  margin-top: 35px !important;
+  font-size: 24px !important;
+}
+
+/* SMALLER SCREENS */
+@media (max-width: 700px) {
+  .login-wrap {
+    padding: 16px !important;
+  }
+
+  .card.login {
+    width: 100% !important;
+    padding: 28px !important;
+  }
+
+  .login .brand.big {
+    font-size: 36px !important;
+  }
+
+  .login p.muted {
+    font-size: 18px !important;
+  }
+
+  .login label {
+    font-size: 19px !important;
+  }
+
+  .login input {
+    height: 62px !important;
+    font-size: 19px !important;
+  }
+
+  .login button:not(.link) {
+    min-height: 62px !important;
+    font-size: 18px !important;
+  }
+
+  .login .toast {
+    font-size: 18px !important;
+  }
+}
+
+
+/* Force equal width for email input and submit button */
+.card.login form {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.card.login form label {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.card.login form input[type="email"] {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.card.login form button[type="submit"] {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* FINAL FIX: input fields and buttons must match */
+.card.login form {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.card.login form label {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+}
+
+.card.login form input,
+.card.login form input[type="email"],
+.card.login form input[inputmode="numeric"] {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
+.card.login form button:not(.link) {
+  width: 100% !important;
+  max-width: none !important;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
+/* Keep resend and change-email buttons their natural size */
+.card.login .row-links button {
+  width: auto !important;
+}
+
+
