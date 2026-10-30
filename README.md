@@ -1,117 +1,162 @@
 # 🎓 CampusConnect - Event & Venue Booking System
 
-CampusConnect is the web based application for the management of campus event bookings. It allows students and organisers to have a centralised system for event bookings, checking availability of venue and seeing booking details.
+Live Website - https://campusconnect-a-event-management-system-1.onrender.com
+
+This web application allows students and organisers to easily manage events on their campus. It allows them to check whether venues are available, create booking requests and view booking information.
+
 ## 📌 Introduction
 
-Organising campus events and venue bookings can be time consuming and hard to keep track of. This project has been created to assist by creating a digital system which can be logged into for users to see availability, make requests and organise events.
+Manual organisation of events and venue bookings can be a lengthy process to keep track of. CampusConnect helps simplify this process by providing a digital solution.
 
-There is a coordinator dashboard to manage booking requests.
+It contains an email OTP authentication system, venue availability checker, booking manager and coordinator dashboard.
 
 ## ✨ Features
 
-- Email OTP Authentication
+Email OTP Authentication - Users can securely login with email verification.
+Event & Venue Booking - Create booking requests for campus venues.
+Venue Availability Calendar - View available venues.
+My Bookings - View personal booking information.
+Coordinator Dashboard - Manage booking requests.
+Booking Manager - Manage events on campus.
+Email Notifications - Send emails.
 
-- Event & Venue Booking
-- See availability of venues via calendar
-- See your bookings
-- Coordinator dashboard
-- Manage campus event bookings
 ## 🛠 Technologies Used
-### Frontend
-- React.js
-- Vite
-- JavaScript
-- HTML5
-- CSS3
-### Backend
-- Node.js
-- Express.js
-- REST API
-### Others
 
-- Git & GitHub
-- Visual Studio Code
-- Email OTP
-- Excel Data Handling
+### Frontend
+React.js
+Vite
+JavaScript
+HTML5
+CSS3
+
+### Backend
+Node.js
+Express.js
+REST API
+Nodemailer / Brevo API
+
+### Data Storage & Tools
+Microsoft Excel
+Git & GitHub
+Visual Studio Code
+Render
+
 ## 📂 Project Structure
-```
+
 CampusConnect/
 │
 ├── backend/
-│  ├── src/
-│  ├── routes/
-│  ├── server.js
-│  ├── package.json
-│  └── .env.example
+│ ├── src/
+│ │ ├── routes/
+│ │ ├── server.js
+│ │ ├── mailer.js
+│ │ ├── config.js
+│ │ └── excel.js
+│ ├── data/
+│ ├── package.json
+│ └── .env.example
 │
 ├── frontend/
-│  ├── src/
-│  │  ├── components/
-│  │  ├── App.jsx
-│  │  ├── api.js
-│  │  └── styles.css
-│  ├── package.json
-│  └── vite.config.js
+│ ├── src/
+│ │ ├── components/
+│ │ ├── App.jsx
+│ │ ├── api.js
+│ │ └── styles.css
+│ ├── package.json
+│ └── vite.config.js
 │
 ├── .gitignore
 └── README.md
-```
-## ⚙ Install
-To run this project follow the steps below:
-### 1. Clone Repository
-```
+
+## ⚙ Installation
+
+### 1. Clone the Repository
+
 git clone https://github.com/thrisharshetty2005/CampusConnect-A-Event-Management-System-.git
-```
-### 2. Go into the folder
-```
+
+### 2. Enter the Project Folder
+
 cd CampusConnect-A-Event-Management-System-
-```
-### 3. Backend
-```
+
+### 3. Setup the Backend
+
 cd backend
 npm install
-```
-Ensure you have set up all the necessary environment variables using your .env.example file in your backend. Create a .env file and enter your own email details and any other needed variables.
-Now start your backend:
-```
+
+Create a new .env file using the .env.example file and enter in your environment variables.
+
+Then start the backend:
+
 npm start
-```
-### 4. Frontend
-Go into a new terminal and type:
-```
+
+### 4. Setup the Frontend
+
+Open a new terminal window.
+
 cd frontend
 npm install
-```
-Ensure you have set up any environment variables needed.
-Now start your frontend:
-```
 npm run dev
-```
-### 5. Run Application
-Now go to the local URL in your frontend terminal - this should be:
-```
+
+### 5. Run the Application
+
+Open the link below in your browser:
+
 http://localhost:5173
-```
-## 🚀 Usage
-1. Open CampusConnect
-2. Login with your email
-3. Complete OTP authentication
-4. Look at the different options for event and venue bookings
-5. See availability of venues via calendar
-6. Make a booking request with the required details
-7. Go to My Bookings to see your booking details
-8. Coordinators can go to the coordinator dashboard to manage bookings
-## 🎯 Goals
-Simplify the booking process for campus events
-Reduce the need for manual organisation and minimise booking conflicts
-Create a centralised booking system
-Improve communication between students and organisers
-Make organising campus events more efficient
-## 🔮 Future Improvements
-Automated confirmation messages
-Improved event booking system
-Better reports
-Better role management
-Integrate with more campus services
-## 🤖 AI Acknowledgement
-This project was developed using the help of AI tools. This helped me with the design, coding and adding features. It made it easier to develop the application overall.
+## 🚀 How To Use
+
+Open the CampusConnect Application.
+Register or Login using your college email address.
+
+Verify your email with the OTP.
+
+View event and venue booking options.
+Check availability with the venue availability calendar.
+Create a venue booking request.
+View your bookings under My Bookings.
+Coordinators can view the coordinator dashboard.
+## 🎯 Objectives
+
+Simplify the booking process for campus venues.
+Reduce manual event organisation.
+Minimise booking conflicts.
+Provide a central booking platform.
+Improve communication between students and organisers.
+## 🔮 Potential Improvements
+Automated confirmation messages.
+Improved event scheduling.
+Booking report.
+Improved role management.
+Integrate more campus services.
+## 🤖 AI
+Throughout this project I have used various AI tools to help with the development process.
+### Example Prompts
+Project Planning
+
+"Help me create a campus event & venue booking management system using React, Node.js, Express & Excel."
+"Suggest what key features and modules should be included in a college event booking application."
+Frontend
+"Create a responsive and easy to use React application for a campus event booking system."
+"Create a venue availability calendar and dashboard."
+Backend
+"Create REST API routes using Node.js & Express for authenticating users and booking venues."
+"Create a booking request manager to stop double bookings."
+Authentication & Email Verification
+"Create an email OTP authentication for users with approved college domains."
+"Limit the expiry time of the OTP, limit how often the OTP can be resent and limit the number of times it can be verified."
+Coordinator Dashboard
+"Create a coordinator dashboard to view, accept and decline campus venue booking requests."
+Data
+"Use Excel to store user, venue and booking data."
+Deployment & Debugging
+"Help me deploy my React & Node.js application using Render."Troubleshoot deployment errors, environment variables, email delivery, and Express proxy configuration."
+
+Documentation
+"Create a README for my GitHub project. Include an introduction, features, technologies used, installation instructions and project structure."
+
+Suggestions and code were generated by AI and then edited and used throughout development.
+
+## 👩‍💻 Author
+
+Thrisha R Shetty
+
+GitHub - https://github.com/thrisharshetty2005
