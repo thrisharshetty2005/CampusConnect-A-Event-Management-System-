@@ -113,5 +113,5 @@ Improved event booking system
 Better reports
 Better role management
 Integrate with more campus services
-## 👩‍💻 Developer
-Thrisha R Shetty
+## 🤖 AI Acknowledgement
+This project was developed using the help of AI tools. This helped me with the design, coding and adding features. It made it easier to develop the application overall.
