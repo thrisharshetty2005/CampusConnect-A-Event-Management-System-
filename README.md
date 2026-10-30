@@ -41,7 +41,9 @@ Git & GitHub
 Visual Studio Code
 Render
 
-## 📂 Project Structure
+## 📁 Project Structure
+
+```text
 CampusConnect/
 │
 ├── backend/
@@ -58,8 +60,6 @@ CampusConnect/
 │   │   └── errors.js
 │   │
 │   ├── data/
-│   │   └── campusconnect.xlsx
-│   │
 │   ├── package.json
 │   └── .env.example
 │
@@ -78,7 +78,7 @@ CampusConnect/
 │
 ├── .gitignore
 └── README.md
-
+```
 ## ⚙ Installation
 
 ### 1. Clone the Repository
