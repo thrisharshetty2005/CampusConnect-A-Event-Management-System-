@@ -15,14 +15,19 @@ export const config = {
   coordinators: list(process.env.COORDINATOR_EMAILS),
   excelPath: path.resolve(here, "..", process.env.EXCEL_PATH || "data/campusconnect.xlsx"),
   mail: {
-    mode: process.env.MAIL_MODE || "smtp",
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT || 465),
-    secure: String(process.env.SMTP_SECURE ?? "true") === "true",
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-    from: process.env.MAIL_FROM || process.env.SMTP_USER,
-  },
+  mode: process.env.MAIL_MODE || "smtp",
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT || 465),
+  secure: String(process.env.SMTP_SECURE ?? "true") === "true",
+  user: process.env.SMTP_USER,
+  pass: process.env.SMTP_PASS,
+  from:
+    process.env.MAIL_FROM_EMAIL ||
+    process.env.MAIL_FROM ||
+    process.env.SMTP_USER,
+  fromName: process.env.MAIL_FROM_NAME || "CampusConnect",
+  brevoApiKey: process.env.BREVO_API_KEY,
+},
   otp: { ttlMin: 10, maxAttempts: 5, resendCooldownSec: 60, maxPerHour: 5 },
   hours: { open: "07:00", close: "22:00" }, // bookable window each day
 };
