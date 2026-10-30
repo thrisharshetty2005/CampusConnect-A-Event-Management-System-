@@ -15,6 +15,7 @@ import bookingRoutes from "./routes/bookings.js";
 import coordinatorRoutes from "./routes/coordinator.js";
 
 const app = express();
+app.set("trust proxy", 1);
 app.disable("x-powered-by");
 app.use(helmet());
 app.use(cors({ origin: config.clientOrigin, credentials: true }));
