@@ -174,7 +174,7 @@ Build a website to allow users with email suffixes nmamit.in and nitte.edu.in to
 ### Documentation
 1. Create a README for my GitHub project. This should include an introduction, features, tech used, installation and project structure.
 
-###🤖 Credits to AI
+### 🤖 **Credits to AI**
 
 Throughout the development of CampusConnect we used AI tools to help plan the project, generate code, improve our design, debug errors and create documentation. We would look at the suggestions given to us by the AI and change them to fit our projects needs.
 ## 👩‍💻 Author
