@@ -1,96 +1,84 @@
 
-# Campus Connect – Campus Event & Venue Management System
+# Campus Connect -Campus Event and Venue Management System
 
 ## Overview
 
-Campus Connect is a web-based application developed to simplify campus event coordination and venue booking at NMAM Institute of Technology (NMAMIT). It provides a centralized platform for college users to access event-related services and manage auditorium and venue booking requests.
+A web based application that allows the users of a college to easily manage events and manage bookings for the venues. This provides an easy way to manage all our events and bookings for the auditorium and venues at NMAM Institute of Technology (NMAMIT).
 
-## Key Features
+## Features
 
-- **User Authentication:** Registration and login functionality.
-- **Email Verification:** OTP-based verification of college email addresses.
-- **Venue Booking:** Submit and manage auditorium and venue booking requests.
-- **Event Coordination:** Organize campus event and venue information.
-- **Data Management:** Maintain application records using Excel-based storage.
-- **User-Friendly Interface:** Simple and accessible web interface.
+User authentication.
+Email verification using OTP.
+Auditorium and venue booking.
+Manage campus events and venues.
+Maintain data using excel files.
+Easy user-friendly interface.
+## Technologies Used
 
-## Technology Stack
-
-- **Frontend:** React.js, Vite
-- **Backend:** Node.js, Express.js
-- **Authentication:** JSON Web Token (JWT)
-- **Email Service:** OTP-based email delivery
-- **Storage:** Microsoft Excel
-- **Tools:** Git, GitHub, Visual Studio Code
-- **Deployment Platform:** Render
+Front-end: React.js, Vite
+Back-end: Node.js, Express.js
+Authentication: JSON Web Token (JWT)
+Email Service: OTP emailing
+Storage: Microsoft Excel
+Tools: Git, GitHub, Visual Studio Code
+Deployment: Render
 
 ## Project Structure
 
-```text
 CampusConnect/
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   └── package.json
-├── backend/
-│   ├── src/
-│   ├── data/
-│   └── package.json
-└── README.md
-```
+(frontend/
+public/
+src/
+package.json)
+backend/
+src/
+data/
+package.json)
+README.md
 
-## Installation and Setup
+## How To Setup
+## Requirements
 
-### Prerequisites
+Node JS, npm
+Git
+Visual Studio Code
 
-- Node.js and npm
-- Git
-- Visual Studio Code
+## Step 1: Clone the repo
 
-### Step 1: Clone the Repository
-
-```bash
 git clone https://github.com/thrisharshetty2005/CampusConnect-A-Event-Management-System-.git
 cd CampusConnect-A-Event-Management-System-
-```
 
-### Step 2: Set Up the Frontend
+## Step 2: Run Front-end
 
-```bash
 cd frontend
 npm install
 npm run dev
-```
 
-### Step 3: Set Up the Backend
+## Step 3: Run Back-end
 
-Open a separate terminal:
+Open another terminal:
 
-```bash
 cd backend
 npm install
 npm start
-```
+Ensure you have set up your environment variables.
 
-Configure the necessary environment variables before starting the backend.
+## Security
 
-## Security and Configuration
+All sensitive details should be stored within environment variables.
+Do not commit your API keys and passwords.
+Set up your email credentials to send the OTP.
+Make sure your data is backed up properly.
 
-- Store sensitive credentials in environment variables.
-- Keep API keys and passwords out of version control.
-- Configure email delivery credentials for OTP verification.
-- Ensure application data is backed up appropriately.
+## Project Objective
 
-## Project Goal
-
-The goal of Campus Connect is to improve campus event management by providing a convenient, centralized system for venue booking, user verification, and event coordination.
+The objective of this project was to make managing events on campus easier by providing an easy to use centralised system to manage bookings, verify users and manage events.
 
 ## Author
 
-**Thrisha R Shetty**
+Thrisha R Shetty
 
-GitHub: [thrisharshetty2005](https://github.com/thrisharshetty2005)
-
+GitHub: https://github.com/thrisharshetty2005
 ---
 
-Developed as a campus event and venue management project.
+This project was created as a campus event and venue management system.
