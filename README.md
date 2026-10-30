@@ -115,7 +115,3 @@ Better role management
 Integrate with more campus services
 ## 👩‍💻 Developer
 Thrisha R Shetty
-GitHub: https://github.com/thrisharshetty2005
----
-
-If you found this project helpful please give it a star! ⭐
