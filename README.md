@@ -42,28 +42,39 @@ Visual Studio Code
 Render
 
 ## 📂 Project Structure
-
 CampusConnect/
 │
 ├── backend/
-│ ├── src/
-│ │ ├── routes/
-│ │ ├── server.js
-│ │ ├── mailer.js
-│ │ ├── config.js
-│ │ └── excel.js
-│ ├── data/
-│ ├── package.json
-│ └── .env.example
+│   ├── src/
+│   │   ├── routes/
+│   │   │   ├── auth.js
+│   │   │   ├── bookings.js
+│   │   │   └── coordinator.js
+│   │   │
+│   │   ├── server.js
+│   │   ├── mailer.js
+│   │   ├── config.js
+│   │   ├── excel.js
+│   │   └── errors.js
+│   │
+│   ├── data/
+│   │   └── campusconnect.xlsx
+│   │
+│   ├── package.json
+│   └── .env.example
 │
 ├── frontend/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── App.jsx
-│ │ ├── api.js
-│ │ └── styles.css
-│ ├── package.json
-│ └── vite.config.js
+│   ├── src/
+│   │   ├── components/
+│   │   ├── App.jsx
+│   │   ├── api.js
+│   │   ├── main.jsx
+│   │   └── styles.css
+│   │
+│   ├── public/
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.js
 │
 ├── .gitignore
 └── README.md
